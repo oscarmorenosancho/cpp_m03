@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/28 16:30:39 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/29 11:57:31 by omoreno-         ###   ########.fr       */
+/*   Created: 2023/06/29 11:55:11 by omoreno-          #+#    #+#             */
+/*   Updated: 2023/06/29 12:20:31 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef __CLAPTRAP_HPP__
-#define __CLAPTRAP_HPP__
+#ifndef __SCAVTRAP_HPP__
+#define __SCAVTRAP_HPP__
 
 # include <string>
+# include "ClapTrap.hpp"
 
-class ScavTrap
+class ScavTrap : ClapTrap
 {
 private:
-	static ScavTrap* list;
-	ScavTrap* next;
 	std::string name;
 	int hitPoints;
 	int energyPoints;
 	int	attackDamage;
-	ScavTrap*	findTarget(const std::string& target);
-
 public:
 	ScavTrap(std::string n);
 	ScavTrap(const ScavTrap& b);
@@ -37,8 +33,9 @@ public:
 	void beRepaired(unsigned int amount);
 	std::ostream& displayStatus(std::ostream& os) const;
 	static void	displayList(std::ostream& os);
+	void guardGate();
 };
 
 std::ostream& operator<<(std::ostream& os, const ScavTrap& ct);
 
-#endif //__CLAPTRAP__
+#endif //__SCAVTRAP_HPP__

@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 16:30:39 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/28 17:45:53 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/29 10:34:25 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,13 @@
 class ClapTrap
 {
 private:
+	static ClapTrap* list;
+	ClapTrap* next;
 	std::string name;
 	int hitPoints;
 	int energyPoints;
 	int	attackDamage;
+	ClapTrap*	findTarget(const std::string& target);
 
 public:
 	ClapTrap(std::string n);
@@ -33,6 +36,7 @@ public:
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 	std::ostream& displayStatus(std::ostream& os) const;
+	static void	displayList(std::ostream& os);
 };
 
 std::ostream& operator<<(std::ostream& os, const ClapTrap& ct);

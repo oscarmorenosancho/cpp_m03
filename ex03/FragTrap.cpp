@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 11:55:20 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 12:16:04 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 12:15:21 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap(std::string n) : ClapTrap(n)
+FragTrap::FragTrap(std::string n) : ClapTrap(n)
 {
-	robotType = "ScavTrap";
+	robotType = "FragTrap";
 	hitPoints = 100;
-	energyPoints = 50;
-	attackDamage = 20;
-	std::cout << "ScavTrap constructor called for ";
+	energyPoints = 100;
+	attackDamage = 30;
+	std::cout << "FragTrap constructor called for ";
 	std::cout << name << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& b) : ClapTrap(b.name)
+FragTrap::FragTrap(const FragTrap& b) : ClapTrap(b.name)
 {
-	robotType = "ScavTrap";
+	robotType = "FragTrap";
 	hitPoints = b.hitPoints;
 	energyPoints = b.energyPoints;
 	attackDamage = b.attackDamage;
-	std::cout << "ScavTrap copy constructor called for ";
+	std::cout << "FragTrap copy constructor called for ";
 	std::cout << name << std::endl;
 }
 
-ScavTrap& ScavTrap::operator=(const ScavTrap& b)
+FragTrap& FragTrap::operator=(const FragTrap& b)
 {
-	std::cout << "ScavTrap copy assignment operator called for ";
+	std::cout << "FragTrap copy assignment operator called for ";
 	std::cout << name << " to become " << b.name << std::endl;
 	name = b.name;
 	hitPoints = b.hitPoints;
@@ -44,43 +44,43 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& b)
 	return (*this);
 }
 
-ScavTrap::~ScavTrap()
+FragTrap::~FragTrap()
 {
-	std::cout << "ScavTrap destructor called for ";
+	std::cout << "FragTrap destructor called for ";
 	std::cout << name << std::endl;
 }
 
-void ScavTrap::attack(const std::string& target)
+void FragTrap::attack(const std::string& target)
 {
-	std::cout << "ScavTrap delegates attack to ClapTrap;\n\t";
+	std::cout << "FragTrap delegates attack to ClapTrap;\n\t";
 	ClapTrap::attack(target);
 }
 
-void ScavTrap::takeDamage(unsigned int amount)
+void FragTrap::takeDamage(unsigned int amount)
 {
-	std::cout << "ScavTrap delegates takeDamage to ClapTrap;\n\t";
+	std::cout << "FragTrap delegates takeDamage to ClapTrap;\n\t";
 	ClapTrap::takeDamage(amount);
 }
 
-void ScavTrap::beRepaired(unsigned int amount)
+void FragTrap::beRepaired(unsigned int amount)
 {
-	std::cout << "ScavTrap delegates beRepaired to ClapTrap;\n\t";
+	std::cout << "FragTrap delegates beRepaired to ClapTrap;\n\t";
 	ClapTrap::beRepaired(amount);
 }
 
-std::ostream& ScavTrap::displayStatus(std::ostream& os) const
+std::ostream& FragTrap::displayStatus(std::ostream& os) const
 {
 	ClapTrap::displayStatus(os);
 	return (os);
 }
 
-std::ostream& operator<<(std::ostream& os, const ScavTrap& st)
+std::ostream& operator<<(std::ostream& os, const FragTrap& st)
 {
 	return (st.displayStatus(os));
 }
 
-void ScavTrap::guardGate()
+void FragTrap::highFivesGuys()
 {
 	std::cout << robotType << " ";
-	std::cout << name << " in Gate keeper mode!" << std::endl;
+	std::cout << name << " High fives!" << std::endl;
 }

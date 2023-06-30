@@ -6,12 +6,11 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 11:55:20 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 11:35:16 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 12:16:32 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <fstream>
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(std::string n) : ClapTrap(n)

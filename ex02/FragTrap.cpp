@@ -6,12 +6,11 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 11:55:20 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 11:57:48 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 12:15:56 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <fstream>
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap(std::string n) : ClapTrap(n)

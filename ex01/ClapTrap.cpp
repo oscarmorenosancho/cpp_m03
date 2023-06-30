@@ -6,12 +6,11 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 11:20:25 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 11:11:12 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 12:16:41 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <fstream>
 #include "ClapTrap.hpp"
 
 ClapTrap* ClapTrap::list = nullptr;

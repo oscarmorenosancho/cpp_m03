@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 12:35:57 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 11:39:12 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 16:10:59 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,14 @@ int main( void ) {
 	a.beRepaired(800);
 	a.attack("Delta");
 	d.guardGate();
+	std::cout << "Extraction operation" << std::endl;
 	std::cout << a;
 	std::cout << b;
 	std::cout << c;
+	std::cout << e;
+	std::cout << e;
+	std::cout << i;
 	std::cout << "Display list" << std::endl;
 	ClapTrap::displayList(std::cout);
-	// ClapTrap::displayList(std::cout);
 	return 0; 
 }

@@ -6,12 +6,19 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 11:55:20 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 12:15:21 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 15:37:28 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "FragTrap.hpp"
+
+FragTrap::FragTrap()
+{
+	robotType = "FragTrap";
+	std::cout << "FragTrap default constructor called for ";
+	std::cout << name << std::endl;
+}
 
 FragTrap::FragTrap(std::string n) : ClapTrap(n)
 {
@@ -48,35 +55,6 @@ FragTrap::~FragTrap()
 {
 	std::cout << "FragTrap destructor called for ";
 	std::cout << name << std::endl;
-}
-
-void FragTrap::attack(const std::string& target)
-{
-	std::cout << "FragTrap delegates attack to ClapTrap;\n\t";
-	ClapTrap::attack(target);
-}
-
-void FragTrap::takeDamage(unsigned int amount)
-{
-	std::cout << "FragTrap delegates takeDamage to ClapTrap;\n\t";
-	ClapTrap::takeDamage(amount);
-}
-
-void FragTrap::beRepaired(unsigned int amount)
-{
-	std::cout << "FragTrap delegates beRepaired to ClapTrap;\n\t";
-	ClapTrap::beRepaired(amount);
-}
-
-std::ostream& FragTrap::displayStatus(std::ostream& os) const
-{
-	ClapTrap::displayStatus(os);
-	return (os);
-}
-
-std::ostream& operator<<(std::ostream& os, const FragTrap& st)
-{
-	return (st.displayStatus(os));
 }
 
 void FragTrap::highFivesGuys()

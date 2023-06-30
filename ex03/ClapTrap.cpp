@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 11:20:25 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 11:11:12 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 14:43:05 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 #include "ClapTrap.hpp"
 
 ClapTrap* ClapTrap::list = nullptr;
+
+ClapTrap::ClapTrap() : robotType("ClapTrap")
+{
+	std::cout << "ClapTrap default constructor called for ";
+	std::cout << name << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string n) : robotType("ClapTrap"), name(n)
 {

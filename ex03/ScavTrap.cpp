@@ -6,13 +6,20 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 11:55:20 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 11:35:16 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 15:38:10 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap()
+{
+	robotType = "ScavTrap";
+	std::cout << "ScavTrap default constructor called for ";
+	std::cout << name << std::endl;
+}
 
 ScavTrap::ScavTrap(std::string n) : ClapTrap(n)
 {
@@ -49,35 +56,6 @@ ScavTrap::~ScavTrap()
 {
 	std::cout << "ScavTrap destructor called for ";
 	std::cout << name << std::endl;
-}
-
-void ScavTrap::attack(const std::string& target)
-{
-	std::cout << "ScavTrap delegates attack to ClapTrap;\n\t";
-	ClapTrap::attack(target);
-}
-
-void ScavTrap::takeDamage(unsigned int amount)
-{
-	std::cout << "ScavTrap delegates takeDamage to ClapTrap;\n\t";
-	ClapTrap::takeDamage(amount);
-}
-
-void ScavTrap::beRepaired(unsigned int amount)
-{
-	std::cout << "ScavTrap delegates beRepaired to ClapTrap;\n\t";
-	ClapTrap::beRepaired(amount);
-}
-
-std::ostream& ScavTrap::displayStatus(std::ostream& os) const
-{
-	ClapTrap::displayStatus(os);
-	return (os);
-}
-
-std::ostream& operator<<(std::ostream& os, const ScavTrap& st)
-{
-	return (st.displayStatus(os));
 }
 
 void ScavTrap::guardGate()

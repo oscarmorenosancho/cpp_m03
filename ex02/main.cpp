@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 12:35:57 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 12:05:56 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 16:03:06 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,16 @@ int main( void ) {
 	k.highFivesGuys();
 	k.attack("Phi");
 	ts.attack("Phi");
+	std::cout << "Extraction operations" << std::endl;
 	std::cout << a;
 	std::cout << b;
 	std::cout << c;
+	std::cout << d;
+	std::cout << e;
+	std::cout << i;
+	std::cout << k;
+	std::cout << f;
+	std::cout << ts;
 	std::cout << "Display list" << std::endl;
 	ClapTrap::displayList(std::cout);
 	// ClapTrap::displayList(std::cout);

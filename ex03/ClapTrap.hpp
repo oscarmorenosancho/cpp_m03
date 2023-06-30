@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 16:30:39 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 10:05:27 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 14:41:53 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ protected:
 	ClapTrap* next;
 	ClapTrap*	findTarget(const std::string& target);
 public:
+	ClapTrap();
 	ClapTrap(std::string n);
 	ClapTrap(const ClapTrap& b);
 	~ClapTrap();

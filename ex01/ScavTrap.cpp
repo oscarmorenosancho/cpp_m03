@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 11:55:20 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 12:16:32 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 16:08:44 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,30 +48,6 @@ ScavTrap::~ScavTrap()
 {
 	std::cout << "ScavTrap destructor called for ";
 	std::cout << name << std::endl;
-}
-
-void ScavTrap::attack(const std::string& target)
-{
-	std::cout << "ScavTrap delegates attack to ClapTrap;\n\t";
-	ClapTrap::attack(target);
-}
-
-void ScavTrap::takeDamage(unsigned int amount)
-{
-	std::cout << "ScavTrap delegates takeDamage to ClapTrap;\n\t";
-	ClapTrap::takeDamage(amount);
-}
-
-void ScavTrap::beRepaired(unsigned int amount)
-{
-	std::cout << "ScavTrap delegates beRepaired to ClapTrap;\n\t";
-	ClapTrap::beRepaired(amount);
-}
-
-std::ostream& ScavTrap::displayStatus(std::ostream& os) const
-{
-	ClapTrap::displayStatus(os);
-	return (os);
 }
 
 std::ostream& operator<<(std::ostream& os, const ScavTrap& st)

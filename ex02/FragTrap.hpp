@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 11:55:11 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 12:38:11 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 15:51:56 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,14 @@
 # include <string>
 # include "ClapTrap.hpp"
 
-class FragTrap : ClapTrap
+class FragTrap : public ClapTrap
 {
 public:
 	FragTrap(std::string n);
 	FragTrap(const FragTrap& b);
 	~FragTrap();
 	FragTrap& operator=(const FragTrap& b);
-	void attack(const std::string& target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
-	std::ostream& displayStatus(std::ostream& os) const;
     void highFivesGuys(void);
 };
-
-std::ostream& operator<<(std::ostream& os, const FragTrap& ct);
 
 #endif //__FRAGTRAP_HPP__

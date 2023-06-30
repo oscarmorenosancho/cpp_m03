@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 11:55:20 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 11:23:41 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 11:35:16 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,5 @@ std::ostream& operator<<(std::ostream& os, const ScavTrap& st)
 void ScavTrap::guardGate()
 {
 	std::cout << robotType << " ";
-	std::cout << name << " guard Gate" << std::endl;
+	std::cout << name << " in Gate keeper mode!" << std::endl;
 }

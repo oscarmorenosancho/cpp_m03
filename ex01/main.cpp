@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 12:35:57 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 11:07:26 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 11:39:12 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ int main( void ) {
 	ClapTrap c("Charly");
 	ScavTrap d("Delta");
 	c = *p;
+	ScavTrap e("Epsilon");
+	ScavTrap i(e);
+	e = d;
 	std::cout << *p;
 	delete p;
 	std::cout << a;

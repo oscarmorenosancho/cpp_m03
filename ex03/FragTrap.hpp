@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 11:55:11 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/30 11:56:45 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 12:37:20 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <string>
 # include "ClapTrap.hpp"
 
-class FragTrap : ClapTrap
+class FragTrap : protected ClapTrap
 {
 public:
 	FragTrap(std::string n);

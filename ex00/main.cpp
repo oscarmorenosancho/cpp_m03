@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 12:35:57 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/29 12:01:50 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 11:17:13 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int main( void ) {
 	c.attack("Alpha");
 	c.attack("Charly");
 	c.attack("Omega");
+	a.beRepaired(800);
 	std::cout << a;
 	std::cout << b;
 	std::cout << c;

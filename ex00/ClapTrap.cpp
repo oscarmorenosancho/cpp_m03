@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 11:20:25 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/29 12:01:50 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 11:17:35 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 		energyPoints--;
 		hitPoints += amount;
 		std::cout << "ClapTrap " << name << " is repaired";
-		std::cout << ", increasing " << amount << " hit points!" << std::endl;
+		std::cout << ", increasing " << amount << " hit points! ";
 		if (energyPoints > 0)
 			std::cout << energyPoints << " energy points left!" << std::endl;
 		else

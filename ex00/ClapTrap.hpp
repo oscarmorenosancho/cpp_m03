@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 16:30:39 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/29 11:57:31 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 11:15:46 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@
 
 # include <string>
 
-class ScavTrap
+class ClapTrap
 {
 private:
-	static ScavTrap* list;
-	ScavTrap* next;
+	static ClapTrap* list;
+	ClapTrap* next;
 	std::string name;
 	int hitPoints;
 	int energyPoints;
 	int	attackDamage;
-	ScavTrap*	findTarget(const std::string& target);
+	ClapTrap*	findTarget(const std::string& target);
 
 public:
-	ScavTrap(std::string n);
-	ScavTrap(const ScavTrap& b);
-	~ScavTrap();
-	ScavTrap& operator=(const ScavTrap& b);
+	ClapTrap(std::string n);
+	ClapTrap(const ClapTrap& b);
+	~ClapTrap();
+	ClapTrap& operator=(const ClapTrap& b);
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
@@ -39,6 +39,6 @@ public:
 	static void	displayList(std::ostream& os);
 };
 
-std::ostream& operator<<(std::ostream& os, const ScavTrap& ct);
+std::ostream& operator<<(std::ostream& os, const ClapTrap& ct);
 
 #endif //__CLAPTRAP__

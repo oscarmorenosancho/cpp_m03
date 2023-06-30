@@ -6,7 +6,7 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 16:30:39 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/29 12:09:23 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 10:05:27 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 
 class ClapTrap
 {
-private:
+protected:
+	std::string robotType;
 	std::string name;
 	int hitPoints;
 	int energyPoints;
 	int	attackDamage;
-protected:
 	static ClapTrap* list;
 	ClapTrap* next;
 	ClapTrap*	findTarget(const std::string& target);

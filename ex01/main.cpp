@@ -6,32 +6,38 @@
 /*   By: omoreno- <omoreno-@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 12:35:57 by omoreno-          #+#    #+#             */
-/*   Updated: 2023/06/29 10:40:07 by omoreno-         ###   ########.fr       */
+/*   Updated: 2023/06/30 11:07:26 by omoreno-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main( void ) {
 	ClapTrap* p = new ClapTrap("Omega");
 	ClapTrap a("Alpha");
 	ClapTrap b( a );
 	ClapTrap c("Charly");
+	ScavTrap d("Delta");
 	c = *p;
 	std::cout << *p;
+	delete p;
 	std::cout << a;
 	std::cout << b;
-	delete p;
 	std::cout << c;
 	a.attack("Alpha");
 	c.attack("Alpha");
 	c.attack("Charly");
 	c.attack("Omega");
+	d.attack("Alpha");
+	a.beRepaired(800);
+	a.attack("Delta");
+	d.guardGate();
 	std::cout << a;
 	std::cout << b;
 	std::cout << c;
 	std::cout << "Display list" << std::endl;
 	ClapTrap::displayList(std::cout);
+	// ClapTrap::displayList(std::cout);
 	return 0; 
 }
